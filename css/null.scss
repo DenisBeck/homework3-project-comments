@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:regular,700&display=swap');
+
+$fontFamily: 'Roboto';
+$fontSize: 14px; // где 14(px) - размер шрифта по умолчанию из макета
+
+// Основные цвета
+$mainColor: #000; // Цвет шрифта по умолчанию
+
+// НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1920;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1170;
+
+// Брейк-поинты
+$pc: 1200px; // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: 991.98px; // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: 767.98px; // Телефоны L
+$mobileSmall: 479.98px; // Телефоны S
+
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	// outline: none;
+}
+a:focus,
+a:active {
+	// outline: none;
+}
+html,
+body {
+	height: 100%;
+	min-width: $minWidth + px;
+}
+body {
+	color: $mainColor;
+	line-height: 1;
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	//text-rendering: optimizeLegibility;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+input,
+button,
+textarea {
+	font-family: $fontFamily;
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+a {
+	color: inherit;
+}
+a:link,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}

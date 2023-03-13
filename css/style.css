@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,700&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #000;
+  line-height: 1;
+  font-family: "Roboto";
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Roboto";
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?gn0065");
+  src: url("fonts/icomoon.eot?gn0065#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?gn0065") format("truetype"), url("fonts/icomoon.woff?gn0065") format("woff"), url("fonts/icomoon.svg?gn0065#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-heart:before {
+  content: "\e900";
+}
+
+.icon-trash-o:before {
+  content: "\f014";
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, #6BA483 0%, #CCD7B7 100%);
+  min-height: 100%;
+  overflow: hidden;
+}
+.page__comments {
+  flex: 1 1 auto;
+}
+
+.comments__container {
+  max-width: 1170px;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 15px 15px 255px;
+  position: relative;
+}
+.comments__block {
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+}
+.comments__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.comments__item {
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 1px 1px 2px #f8f8f8;
+}
+.comments__form {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 240px;
+  z-index: 5;
+  background: #c9c9c9;
+  padding: 15px;
+}
+
+.comments-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.comments-item__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comments-item__name {
+  font-weight: 700;
+}
+.comments-item__like {
+  opacity: 0.4;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover) {
+  .comments-item__like:hover {
+    opacity: 1;
+  }
+}
+.comments-item__like._active {
+  opacity: 1;
+}
+.comments-item__like._active .icon-heart {
+  color: red;
+}
+.comments-item__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comments-item__date {
+  opacity: 0.4;
+  display: flex;
+  gap: 5px;
+}
+.comments-item__delete {
+  color: #E37A7F;
+  opacity: 0.5;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover) {
+  .comments-item__delete:hover {
+    opacity: 1;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form__title {
+  font-size: 24px;
+  text-align: center;
+}
+.form__body {
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1 1 auto;
+}
+.form__input input {
+  transition: all 0.3s ease 0s;
+}
+.form__input._form-error {
+  position: relative;
+}
+.form__input._form-error input {
+  box-shadow: 0 0 5px red;
+}
+.form__input._form-error input::placeholder {
+  font-size: 0;
+}
+.form__input_text {
+  flex: 1 1 auto;
+}
+.form__text {
+  flex: 1 1 auto;
+  width: 100%;
+}
+.form__text textarea {
+  transition: all 0.3s ease 0s;
+}
+.form__text._form-error {
+  position: relative;
+}
+.form__text._form-error textarea {
+  box-shadow: 0 0 5px red;
+}
+.form__text._form-error textarea::placeholder {
+  font-size: 0;
+}
+.form__bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.form__error {
+  color: red;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+.input::placeholder {
+  z-index: 1000;
+}
+
+.textarea {
+  border-radius: 6px;
+  resize: none;
+  padding: 15px;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+
+.submit {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 6px;
+  padding: 0 30px;
+}
+
+.icon-heart,
+.icon-trash-o {
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=style.css.map */
