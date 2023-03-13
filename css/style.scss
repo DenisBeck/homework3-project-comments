@@ -75,7 +75,6 @@
         bottom: 0;
         left: 0;
         right: 0;
-        height: 240px;
         z-index: 5;
         background: #c9c9c9;
         padding: 15px;
@@ -111,6 +110,11 @@
                 color: red;
             }
         }
+        span:last-child {
+            @media(max-width: 420px) {
+                display: none;
+            }
+        }
     }
     &__text {
     }
@@ -135,6 +139,11 @@
         @media(any-hover) {
             &:hover {
                 opacity: 1;
+            }
+        }
+        span:last-child {
+            @media(max-width: 420px) {
+                display: none;
             }
         }
     }
@@ -171,6 +180,14 @@
         }
         &_text {
             flex: 1 1 auto;
+            @media(max-width: 520px) {
+                flex: 1;
+            }
+        }
+        &_submit {
+            @media(max-width: 520px) {
+                flex: 1 1 100%;
+            }
         }
     }
     &__text {
@@ -194,6 +211,10 @@
         display: flex;
         justify-content: space-between;
         gap: 30px;
+        @media(max-width: 520px) {
+            flex-wrap: wrap;
+            gap: 15px;
+        }
     }
     &__error {
         color: red;
@@ -230,6 +251,9 @@
     height: 40px;
     border-radius: 6px;
     padding: 0 30px;
+    @media(max-width: 520px) {
+        width: 100%;
+    }
 }
 .icon-heart,
 .icon-trash-o {
